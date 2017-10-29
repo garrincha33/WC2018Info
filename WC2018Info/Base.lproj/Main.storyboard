@@ -70,6 +70,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="WCINFO 2018" id="Fe2-Iq-v3m"/>
+                    <connections>
+                        <outlet property="collectionView" destination="jC6-bj-odD" id="e0i-z4-8rh"/>
+                        <outlet property="searchBar" destination="0aW-b1-zge" id="bxY-Es-QM4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

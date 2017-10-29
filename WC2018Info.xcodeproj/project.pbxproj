@@ -66,6 +66,12 @@
 		1B495DCB1FA19F8600A8739F = {
 			isa = PBXGroup;
 			children = (
+				1B495E061FA6123000A8739F /* Helpers */,
+				1B495E051FA6122400A8739F /* Apis */,
+				1B495E021FA6120700A8739F /* Model */,
+				1B495E031FA6120D00A8739F /* View */,
+				1B495E041FA6121300A8739F /* Controller */,
+				1B495E011FA611F900A8739F /* Extensions */,
 				1B495DEB1FA60B9B00A8739F /* Fonts */,
 				1B495DD61FA19F8600A8739F /* WC2018Info */,
 				1B495DD51FA19F8600A8739F /* Products */,
@@ -87,7 +93,6 @@
 			children = (
 				1B495DE91FA5D96A00A8739F /* GoogleService-Info.plist */,
 				1B495DD71FA19F8600A8739F /* AppDelegate.swift */,
-				1B495DD91FA19F8600A8739F /* TeamsViewController.swift */,
 				1B495DDB1FA19F8600A8739F /* Main.storyboard */,
 				1B495DDE1FA19F8600A8739F /* Assets.xcassets */,
 				1B495DE01FA19F8600A8739F /* LaunchScreen.storyboard */,
@@ -120,6 +125,49 @@
 				1B495DFA1FA60BAC00A8739F /* HEADPLANE.TTF */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1B495E011FA611F900A8739F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B495E021FA6120700A8739F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B495E031FA6120D00A8739F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B495E041FA6121300A8739F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B495DD91FA19F8600A8739F /* TeamsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B495E051FA6122400A8739F /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		1B495E061FA6123000A8739F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		56D49B20A0497A01689B5748 /* Pods */ = {
