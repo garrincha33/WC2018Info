@@ -39,10 +39,6 @@ class TeamCollectionViewCell: UICollectionViewCell {
         //use protocol
         
     }
-    
-    
-    
-
 }
 
 

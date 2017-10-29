@@ -17,6 +17,8 @@
 		1B495E001FA60D2C00A8739F /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B495DF71FA60BAC00A8739F /* Exo2-Regular.ttf */; };
 		1B495E081FA6186A00A8739F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E071FA6186A00A8739F /* Teams.swift */; };
 		1B495E0A1FA6204600A8739F /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E091FA6204600A8739F /* TeamCollectionViewCell.swift */; };
+		1B495E0C1FA6583C00A8739F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E0B1FA6583C00A8739F /* Api.swift */; };
+		1B495E0E1FA6585000A8739F /* TeamsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E0D1FA6585000A8739F /* TeamsApi.swift */; };
 		B7CC4455639235776713E7CD /* Pods_WC2018Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		1B495DFE1FA60BAD00A8739F /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
 		1B495E071FA6186A00A8739F /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		1B495E091FA6204600A8739F /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B495E0B1FA6583C00A8739F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		1B495E0D1FA6585000A8739F /* TeamsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsApi.swift; sourceTree = "<group>"; };
 		38EB280269C1B2605B54684A /* Pods-WC2018Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.debug.xcconfig"; sourceTree = "<group>"; };
 		F713BED1E989D50424DDF327 /* Pods-WC2018Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.release.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.release.xcconfig"; sourceTree = "<group>"; };
 		FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WC2018Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +169,8 @@
 		1B495E051FA6122400A8739F /* Apis */ = {
 			isa = PBXGroup;
 			children = (
+				1B495E0B1FA6583C00A8739F /* Api.swift */,
+				1B495E0D1FA6585000A8739F /* TeamsApi.swift */,
 			);
 			path = Apis;
 			sourceTree = "<group>";
@@ -336,7 +342,9 @@
 				1B495E081FA6186A00A8739F /* Teams.swift in Sources */,
 				1B495E0A1FA6204600A8739F /* TeamCollectionViewCell.swift in Sources */,
 				1B495DDA1FA19F8600A8739F /* TeamsViewController.swift in Sources */,
+				1B495E0C1FA6583C00A8739F /* Api.swift in Sources */,
 				1B495DD81FA19F8600A8739F /* AppDelegate.swift in Sources */,
+				1B495E0E1FA6585000A8739F /* TeamsApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
