@@ -15,6 +15,7 @@
 		1B495DEA1FA5D96A00A8739F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B495DE91FA5D96A00A8739F /* GoogleService-Info.plist */; };
 		1B495DFF1FA60D2600A8739F /* HEADPLANE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1B495DFA1FA60BAC00A8739F /* HEADPLANE.TTF */; };
 		1B495E001FA60D2C00A8739F /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B495DF71FA60BAC00A8739F /* Exo2-Regular.ttf */; };
+		1B495E081FA6186A00A8739F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E071FA6186A00A8739F /* Teams.swift */; };
 		B7CC4455639235776713E7CD /* Pods_WC2018Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		1B495DFC1FA60BAD00A8739F /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.ttf"; sourceTree = "<group>"; };
 		1B495DFD1FA60BAD00A8739F /* Exo2-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-LightItalic.ttf"; sourceTree = "<group>"; };
 		1B495DFE1FA60BAD00A8739F /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		1B495E071FA6186A00A8739F /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		38EB280269C1B2605B54684A /* Pods-WC2018Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.debug.xcconfig"; sourceTree = "<group>"; };
 		F713BED1E989D50424DDF327 /* Pods-WC2018Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.release.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.release.xcconfig"; sourceTree = "<group>"; };
 		FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WC2018Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,12 @@
 		1B495DCB1FA19F8600A8739F = {
 			isa = PBXGroup;
 			children = (
+				1B495E061FA6123000A8739F /* Helpers */,
+				1B495E051FA6122400A8739F /* Apis */,
+				1B495E021FA6120700A8739F /* Model */,
+				1B495E031FA6120D00A8739F /* View */,
+				1B495E041FA6121300A8739F /* Controller */,
+				1B495E011FA611F900A8739F /* Extensions */,
 				1B495DEB1FA60B9B00A8739F /* Fonts */,
 				1B495DD61FA19F8600A8739F /* WC2018Info */,
 				1B495DD51FA19F8600A8739F /* Products */,
@@ -87,7 +95,6 @@
 			children = (
 				1B495DE91FA5D96A00A8739F /* GoogleService-Info.plist */,
 				1B495DD71FA19F8600A8739F /* AppDelegate.swift */,
-				1B495DD91FA19F8600A8739F /* TeamsViewController.swift */,
 				1B495DDB1FA19F8600A8739F /* Main.storyboard */,
 				1B495DDE1FA19F8600A8739F /* Assets.xcassets */,
 				1B495DE01FA19F8600A8739F /* LaunchScreen.storyboard */,
@@ -120,6 +127,50 @@
 				1B495DFA1FA60BAC00A8739F /* HEADPLANE.TTF */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1B495E011FA611F900A8739F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B495E021FA6120700A8739F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B495E071FA6186A00A8739F /* Teams.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B495E031FA6120D00A8739F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B495E041FA6121300A8739F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B495DD91FA19F8600A8739F /* TeamsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B495E051FA6122400A8739F /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		1B495E061FA6123000A8739F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		56D49B20A0497A01689B5748 /* Pods */ = {
@@ -277,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B495E081FA6186A00A8739F /* Teams.swift in Sources */,
 				1B495DDA1FA19F8600A8739F /* TeamsViewController.swift in Sources */,
 				1B495DD81FA19F8600A8739F /* AppDelegate.swift in Sources */,
 			);
