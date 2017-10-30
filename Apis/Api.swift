@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct Api {
+    //call in VC
+    static var User = TeamApi()
+}
