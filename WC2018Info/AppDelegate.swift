@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        UINavigationBar.appearance().titleTextAttributes = [
+            UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedStringKey.font: UIFont(name: "HEADPLANE", size: 20)!]
         return true
     }

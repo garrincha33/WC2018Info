@@ -29,9 +29,6 @@ class TeamCollectionViewCell: UICollectionViewCell {
             let photoUrl = URL(string: photoUrlString)
             teamPhoto.sd_setImage(with: photoUrl)
         }
-        
-        print("ddid we get here")
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleSelectPhoto))
         teamPhoto.addGestureRecognizer(tap)
         teamPhoto.isUserInteractionEnabled = true

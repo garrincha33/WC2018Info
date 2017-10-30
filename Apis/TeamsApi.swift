@@ -26,7 +26,6 @@ class TeamApi {
             })
         }
     }
-    
     //--use in get team detail to display team data when cell is tapped
     func observeTeams(withId id: String, completion: @escaping (Teams) -> Void) {
         REF_TEAMS.child(id).observe(.value) { (snapshot: DataSnapshot) in
