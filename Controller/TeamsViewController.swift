@@ -19,6 +19,8 @@ class TeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //--hidekeyboard
+        self.hideKeyboardWhenTappedAround()
         //-----collection view data source and delegate
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -126,4 +128,16 @@ extension TeamsViewController: UISearchBarDelegate {
         
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
