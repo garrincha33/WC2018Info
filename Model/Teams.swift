@@ -21,7 +21,6 @@ class Teams {
     var qualified: String?
     
 }
-
 extension Teams {
     func transformTeam(dict: [String: Any], key: String) -> Teams {
         let team = Teams()
