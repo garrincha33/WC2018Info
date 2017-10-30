@@ -74,6 +74,15 @@ class TeamsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TeamDetailVC" {
+            //transition()
+            let detailVC = segue.destination as! TeamDetailViewController
+            let uid = sender as! String
+            detailVC.uid = uid
+            
+        }
+    }
 }
 
 extension TeamsViewController: UICollectionViewDataSource{
@@ -85,7 +94,7 @@ extension TeamsViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
         let team = teams[indexPath.row]
         cell.teams = team
-       // cell.delegate = self
+        cell.delegate = self
         return cell
     }
 }
@@ -111,6 +120,16 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
         // give space top left bottom and right for cells
         return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 10)
+    }
+    
+}
+
+extension TeamsViewController: TeamCollectionViewCellDelegate {
+    
+    func goToTeamDetailsVC(teamId: String) {
+        UIView.setAnimationsEnabled(false)
+        performSegue(withIdentifier: "TeamDetailVC", sender: teamId)
+        
     }
     
 }

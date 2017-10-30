@@ -10,11 +10,14 @@ import UIKit
 import SDWebImage
 
 //--MARK implement protocol for switching view
+protocol TeamCollectionViewCellDelegate {
+    func goToTeamDetailsVC(teamId: String)
+}
 
 class TeamCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var teamPhoto: UIImageView!
-    
+    var delegate: TeamCollectionViewCellDelegate?
     var teams: Teams? {
         didSet {
             
@@ -35,9 +38,11 @@ class TeamCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func handleSelectPhoto() {
-      
-            
         
+        if let teamId = teams?.id {
+            delegate?.goToTeamDetailsVC(teamId: teamId)
+            print("tapped")
+        }
     }
         
 }
