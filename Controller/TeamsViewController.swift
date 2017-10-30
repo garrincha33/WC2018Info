@@ -34,7 +34,7 @@ class TeamsViewController: UIViewController {
         //----searchbar customisation
         searchBar.placeholder = "search for your team"
         searchBar.searchBarStyle = .minimal
-        //searchBar.delegate = self
+        searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
 
     }
@@ -59,9 +59,11 @@ class TeamsViewController: UIViewController {
     }
     
     func doSearch() {
-        
-        //searchbar filtering
-        
+        if let search = searchBar.text {
+            teams = (search.isEmpty) ? teasmsCopy : teasmsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
+        }
+   
+        collectionView.reloadData()
     }
     
     func transition() {
@@ -107,6 +109,21 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
         // give space top left bottom and right for cells
         return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 10)
+    }
+    
+}
+
+extension TeamsViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        doSearch()
+        searchBar.endEditing(true)
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        doSearch()
+        
     }
     
 }

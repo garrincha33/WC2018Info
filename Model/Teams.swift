@@ -35,11 +35,7 @@ extension Teams {
         team.description = dict["description"] as? String
         team.lastAppearance = dict["lastappearance"] as? String
         team.qualified = dict["qualified"] as? String
-        
 
-        
-        
-        
         return team
         
     }
