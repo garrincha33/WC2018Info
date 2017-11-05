@@ -13,6 +13,9 @@ class TeamDetailViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var teamName: UILabel!
+    @IBOutlet weak var starMan: UILabel!
+    @IBOutlet weak var starManName: UILabel!
     
     var uid = ""
     var team: [Teams] = []
@@ -22,9 +25,12 @@ class TeamDetailViewController: UIViewController {
         
         //-----google ads DONT FORGET TO CHANGE TO LIVE ACCOUNT CURRENTLY ON TEST
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+       //--live bannerView.adUnitID = "ca-app-pub-4849153814101309/2541015704"
+        
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
+        loadTeams()
         
 
     }
@@ -43,11 +49,14 @@ class TeamDetailViewController: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 1
         self.view.insertSubview(backgroundImage, at: 0)
-        
-    
-        
     }
-
-
-
+    
+    func loadTeams() {
+        Api.User.observeTeams(withId: uid) { (team) in
+            self.team.append(team)
+            self.teamName.text = team.teamName
+            self.starMan.text = team.starMan
+            self.starManName.text = team.starManName
+        }
+    }
 }

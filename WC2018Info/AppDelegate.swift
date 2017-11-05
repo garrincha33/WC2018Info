@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSAttributedStringKey.font: UIFont(name: "HEADPLANE", size: 20)!]
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
+        //--live GADMobileAds.configure(withApplicationID: "ca-app-pub-4849153814101309/2541015704")
         return true
     }
 

@@ -38,6 +38,16 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
+        
+//        for family: String in UIFont.familyNames
+//        {
+//            print("\(family)")
+//            for names: String in UIFont.fontNames(forFamilyName: family)
+//            {
+//                print("== \(names)")
+//            }
+//        }
+        
 
     }
     
@@ -60,6 +70,14 @@ class TeamsViewController: UIViewController {
         
     }
     
+    func transition() {
+        let transition = CATransition()
+        transition.duration = 0.7
+        transition.type = kCATransitionPush
+        transition.subtype = kCAGravityTop
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+    }
+    
     func doSearch() {
         if let search = searchBar.text {
             teams = (search.isEmpty) ? teasmsCopy : teasmsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
@@ -67,16 +85,10 @@ class TeamsViewController: UIViewController {
    
         collectionView.reloadData()
     }
-    
-    func transition() {
-        
-        //transition for switching to team details VC
-        
-    }
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TeamDetailVC" {
-            //transition()
+            transition()
             let detailVC = segue.destination as! TeamDetailViewController
             let uid = sender as! String
             detailVC.uid = uid

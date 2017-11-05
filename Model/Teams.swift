@@ -13,6 +13,7 @@ class Teams {
     var teamName: String?
     var photoUrl: String?
     var starMan: String?
+    var starManName: String?
     var uid: String?
     var id: String?
     var bestPerformance: String?
@@ -30,6 +31,7 @@ extension Teams {
         team.teamName = dict["teamname"] as? String
         team.photoUrl = dict["photoUrl"] as? String
         team.starMan = dict["starman"] as? String
+        team.starManName = dict["starmanname"] as? String
         team.uid = dict["uid"] as? String
         team.bestPerformance = dict["bestperformance"] as? String
         team.description = dict["description"] as? String
