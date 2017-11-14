@@ -23,6 +23,7 @@
 		1B495E131FA7608000A8739F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B495E121FA7608000A8739F /* StoreKit.framework */; };
 		1B495E151FA762AD00A8739F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B495E141FA762AD00A8739F /* GoogleMobileAds.framework */; };
 		1B495E171FA767BD00A8739F /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B495E161FA767BD00A8739F /* TeamDetailViewController.swift */; };
+		1B8A552D1FBBA99B0080A43B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A552C1FBBA99B0080A43B /* test.swift */; };
 		B7CC4455639235776713E7CD /* Pods_WC2018Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		1B495E121FA7608000A8739F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1B495E141FA762AD00A8739F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1B495E161FA767BD00A8739F /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		1B8A552C1FBBA99B0080A43B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		38EB280269C1B2605B54684A /* Pods-WC2018Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.debug.xcconfig"; sourceTree = "<group>"; };
 		F713BED1E989D50424DDF327 /* Pods-WC2018Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WC2018Info.release.xcconfig"; path = "Pods/Target Support Files/Pods-WC2018Info/Pods-WC2018Info.release.xcconfig"; sourceTree = "<group>"; };
 		FF9C091ED378A4822D9C6025 /* Pods_WC2018Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WC2018Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 		1B495E061FA6123000A8739F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1B8A552C1FBBA99B0080A43B /* test.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				1B495E0A1FA6204600A8739F /* TeamCollectionViewCell.swift in Sources */,
 				1B495E171FA767BD00A8739F /* TeamDetailViewController.swift in Sources */,
 				1B495DDA1FA19F8600A8739F /* TeamsViewController.swift in Sources */,
+				1B8A552D1FBBA99B0080A43B /* test.swift in Sources */,
 				1B495E111FA70BD700A8739F /* Config.swift in Sources */,
 				1B495E0C1FA6583C00A8739F /* Api.swift in Sources */,
 				1B495DD81FA19F8600A8739F /* AppDelegate.swift in Sources */,
