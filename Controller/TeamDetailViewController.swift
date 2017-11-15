@@ -31,7 +31,15 @@ class TeamDetailViewController: UIViewController {
         bannerView.load(GADRequest())
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
         loadTeams()
+       setCustomBackButton()
+    
         
+    
+
+    }
+    
+    func setCustomBackButton() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
     }
     
@@ -49,7 +57,10 @@ class TeamDetailViewController: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 1
         self.view.insertSubview(backgroundImage, at: 0)
+        
     }
+    
+ 
     
     func loadTeams() {
         Api.User.observeTeams(withId: uid) { (team) in
