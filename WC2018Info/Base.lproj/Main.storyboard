@@ -105,22 +105,41 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddn-Du-9uV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1550"/>
                                 <subviews>
-                                    <view alpha="0.5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-nd-fqg">
+                                    <view alpha="0.5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-nd-fqg" userLabel="MainView">
                                         <rect key="frame" x="0.0" y="-100" width="375" height="1380"/>
                                         <subviews>
-                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUA-7b-g9y">
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUA-7b-g9y" userLabel="StarManView">
                                                 <rect key="frame" x="8" y="237" width="359" height="93"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="93" id="Tjw-el-KBc"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-tK-N6j" userLabel="QualifyStackView">
+                                                <rect key="frame" x="8" y="383" width="359" height="136"/>
+                                                <subviews>
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmJ-ck-fA6" userLabel="QualifyView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="136"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-o9-xpr">
+                                                        <rect key="frame" x="192" y="0.0" width="167" height="136"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="136" id="qBk-3P-62K"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mj5-tK-N6j" secondAttribute="trailing" constant="8" id="0Qh-No-3DN"/>
+                                            <constraint firstItem="mj5-tK-N6j" firstAttribute="leading" secondItem="f9A-nd-fqg" secondAttribute="leading" constant="8" id="8x1-gz-5zE"/>
                                             <constraint firstItem="IUA-7b-g9y" firstAttribute="leading" secondItem="f9A-nd-fqg" secondAttribute="leading" constant="8" id="ACQ-oL-XOa"/>
                                             <constraint firstAttribute="trailing" secondItem="IUA-7b-g9y" secondAttribute="trailing" constant="8" id="WSR-hZ-wMq"/>
                                             <constraint firstAttribute="height" constant="1380" id="b77-cu-qOq"/>
+                                            <constraint firstItem="mj5-tK-N6j" firstAttribute="top" secondItem="IUA-7b-g9y" secondAttribute="bottom" constant="53" id="haR-gz-hI6"/>
                                             <constraint firstItem="IUA-7b-g9y" firstAttribute="top" secondItem="f9A-nd-fqg" secondAttribute="top" constant="237" id="k4j-kH-sec"/>
                                         </constraints>
                                     </view>
@@ -214,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNo-q8-fZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669.5999999999999" y="46.776611694152926"/>
+            <point key="canvasLocation" x="1667.8125" y="46.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KnO-Gq-9o6">
