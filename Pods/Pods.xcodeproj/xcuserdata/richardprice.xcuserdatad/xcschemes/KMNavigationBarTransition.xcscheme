@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8939FCF9658B26732B78C40AA66C9D1C'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = '2543806B00BF71E436567C7E7BCCD3FF'
+               BlueprintName = 'KMNavigationBarTransition'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SDWebImage.framework'>
+               BuildableName = 'KMNavigationBarTransition.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

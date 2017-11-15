@@ -9,6 +9,7 @@ target 'WC2018Info' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'SDWebImage'
+  pod 'KMNavigationBarTransition'
   # Pods for WC2018Info
 
 end

@@ -38,6 +38,16 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
+        
+//        for family: String in UIFont.familyNames
+//        {
+//            print("\(family)")
+//            for names: String in UIFont.fontNames(forFamilyName: family)
+//            {
+//                print("== \(names)")
+//            }
+//        }
+        
 
     }
     
@@ -60,6 +70,14 @@ class TeamsViewController: UIViewController {
         
     }
     
+    func transition() {
+        let transition = CATransition()
+        transition.duration = 0.7
+        transition.type = kCATransitionPush
+        transition.subtype = kCAGravityTop
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+    }
+    
     func doSearch() {
         if let search = searchBar.text {
             teams = (search.isEmpty) ? teasmsCopy : teasmsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
@@ -67,13 +85,16 @@ class TeamsViewController: UIViewController {
    
         collectionView.reloadData()
     }
-    
-    func transition() {
-        
-        //transition for switching to team details VC
-        
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TeamDetailVC" {
+            transition()
+            let detailVC = segue.destination as! TeamDetailViewController
+            let uid = sender as! String
+            detailVC.uid = uid
+            
+        }
     }
-    
 }
 
 extension TeamsViewController: UICollectionViewDataSource{
@@ -85,7 +106,7 @@ extension TeamsViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
         let team = teams[indexPath.row]
         cell.teams = team
-       // cell.delegate = self
+        cell.delegate = self
         return cell
     }
 }
@@ -111,6 +132,16 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
         // give space top left bottom and right for cells
         return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 10)
+    }
+    
+}
+
+extension TeamsViewController: TeamCollectionViewCellDelegate {
+    
+    func goToTeamDetailsVC(teamId: String) {
+        UIView.setAnimationsEnabled(false)
+        performSegue(withIdentifier: "TeamDetailVC", sender: teamId)
+        
     }
     
 }
