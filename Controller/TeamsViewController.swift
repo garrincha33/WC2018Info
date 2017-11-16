@@ -39,14 +39,7 @@ class TeamsViewController: UIViewController {
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
         
-//        for family: String in UIFont.familyNames
-//        {
-//            print("\(family)")
-//            for names: String in UIFont.fontNames(forFamilyName: family)
-//            {
-//                print("== \(names)")
-//            }
-//        }
+        
         
 
     }
@@ -171,4 +164,9 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+extension UISearchBar {
+    
+    
 }
