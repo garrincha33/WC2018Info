@@ -185,6 +185,25 @@
                                         <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoY-Dl-MPb">
+                                        <rect key="frame" x="10" y="246" width="72.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ftf-XG-gVg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJb-Qh-p31">
+                                        <rect key="frame" x="264.5" y="246" width="100.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="bjL-be-BPV"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="tXB-XW-QBQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StarMan Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-SM-nu8">
                                         <rect key="frame" x="8" y="166" width="359" height="30"/>
                                         <constraints>
@@ -213,9 +232,13 @@
                                     <constraint firstAttribute="trailing" secondItem="f9A-nd-fqg" secondAttribute="trailing" id="Ybb-AL-wzW"/>
                                     <constraint firstItem="f9A-nd-fqg" firstAttribute="top" secondItem="Ddn-Du-9uV" secondAttribute="top" constant="-100" id="aR4-rr-wfB"/>
                                     <constraint firstItem="f9A-nd-fqg" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" id="dgl-Ed-t6e"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJb-Qh-p31" secondAttribute="trailing" constant="10" id="g9f-2V-aXM"/>
                                     <constraint firstItem="3By-A9-tfH" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" constant="8" id="hJh-qb-FON"/>
+                                    <constraint firstItem="GoY-Dl-MPb" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" constant="10" id="i7T-zn-6w1"/>
                                     <constraint firstItem="3By-A9-tfH" firstAttribute="top" secondItem="Ddn-Du-9uV" secondAttribute="top" constant="30" id="k3z-xa-haL"/>
+                                    <constraint firstItem="gJb-Qh-p31" firstAttribute="top" secondItem="lF7-SM-nu8" secondAttribute="bottom" constant="50" id="p3w-IQ-XVg"/>
                                     <constraint firstItem="lF7-SM-nu8" firstAttribute="top" secondItem="kYD-78-i2A" secondAttribute="bottom" constant="35" id="p7v-Xa-4JU"/>
+                                    <constraint firstItem="GoY-Dl-MPb" firstAttribute="top" secondItem="lF7-SM-nu8" secondAttribute="bottom" constant="50" id="qFm-aM-xZ3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
