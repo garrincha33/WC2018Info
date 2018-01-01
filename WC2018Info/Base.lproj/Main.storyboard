@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxD-wW-fXb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxD-wW-fXb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Farah.ttc">
+            <string>Farah</string>
+        </array>
         <array key="HEADPLANE.TTF">
             <string>headplane</string>
         </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue-Bold</string>
-        </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="46.326836581709152"/>
+            <point key="canvasLocation" x="382" y="46"/>
         </scene>
         <!--Team Detail View Controller-->
         <scene sceneID="pLw-ZA-O7n">
@@ -166,6 +166,15 @@
                                             <constraint firstAttribute="height" constant="50" id="F5j-JS-wQD"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iM-eI-4Xw">
+                                        <rect key="frame" x="114" y="435" width="147" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="uP8-tu-OTo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3By-A9-tfH">
                                         <rect key="frame" x="8" y="30" width="359" height="48"/>
                                         <constraints>
@@ -209,7 +218,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kSi-R4-Sap"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="26"/>
                                         <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -220,14 +229,17 @@
                                     <constraint firstItem="Ctc-SW-9U0" firstAttribute="top" secondItem="Ddn-Du-9uV" secondAttribute="top" constant="1342" id="0eX-tM-Acg"/>
                                     <constraint firstItem="lF7-SM-nu8" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" constant="8" id="8dL-zz-iNS"/>
                                     <constraint firstItem="f9A-nd-fqg" firstAttribute="centerX" secondItem="Ddn-Du-9uV" secondAttribute="centerX" id="B7J-cf-Gjk"/>
+                                    <constraint firstItem="1iM-eI-4Xw" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" constant="114" id="FcA-iL-MB5"/>
                                     <constraint firstAttribute="trailing" secondItem="3By-A9-tfH" secondAttribute="trailing" constant="8" id="HSy-Ht-kPq"/>
                                     <constraint firstAttribute="trailing" secondItem="lF7-SM-nu8" secondAttribute="trailing" constant="8" id="Mc2-6Z-AdG"/>
                                     <constraint firstAttribute="bottom" secondItem="f9A-nd-fqg" secondAttribute="bottom" constant="120" id="OCg-bI-qEV"/>
                                     <constraint firstItem="Ctc-SW-9U0" firstAttribute="leading" secondItem="f9A-nd-fqg" secondAttribute="leading" id="Q2I-AB-C76"/>
+                                    <constraint firstAttribute="trailing" secondItem="1iM-eI-4Xw" secondAttribute="trailing" constant="114" id="SNY-Ev-qcR"/>
                                     <constraint firstItem="Ctc-SW-9U0" firstAttribute="trailing" secondItem="f9A-nd-fqg" secondAttribute="trailing" id="Y1N-Dq-ud1"/>
                                     <constraint firstItem="kYD-78-i2A" firstAttribute="top" secondItem="3By-A9-tfH" secondAttribute="bottom" constant="32" id="YKN-Ra-RpT"/>
                                     <constraint firstAttribute="trailing" secondItem="f9A-nd-fqg" secondAttribute="trailing" id="Ybb-AL-wzW"/>
                                     <constraint firstItem="f9A-nd-fqg" firstAttribute="top" secondItem="Ddn-Du-9uV" secondAttribute="top" constant="-100" id="aR4-rr-wfB"/>
+                                    <constraint firstItem="1iM-eI-4Xw" firstAttribute="top" secondItem="lF7-SM-nu8" secondAttribute="bottom" constant="239" id="cVg-Bf-GcN"/>
                                     <constraint firstItem="f9A-nd-fqg" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" id="dgl-Ed-t6e"/>
                                     <constraint firstAttribute="trailing" secondItem="gJb-Qh-p31" secondAttribute="trailing" constant="10" id="g9f-2V-aXM"/>
                                     <constraint firstItem="3By-A9-tfH" firstAttribute="leading" secondItem="Ddn-Du-9uV" secondAttribute="leading" constant="8" id="hJh-qb-FON"/>
