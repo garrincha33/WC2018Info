@@ -21,6 +21,7 @@ class Teams {
     var lastAppearance:          String?
     var qualified:               String?
     var lastResults:             String?
+    var teamDetails:             String?
     
 }
 extension Teams {
@@ -39,6 +40,7 @@ extension Teams {
         team.lastAppearance = dict["lastappearance"] as? String
         team.qualified = dict["qualified"] as? String
         team.lastResults = dict["lastresults"] as? String
+        team.teamDetails = dict["teamdetails"] as? String
 
         return team
         
