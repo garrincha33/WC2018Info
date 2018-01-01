@@ -9,13 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Farah.ttc">
-            <string>Farah</string>
-        </array>
         <array key="HEADPLANE.TTF">
             <string>headplane</string>
         </array>
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
@@ -124,11 +122,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-tK-N6j" userLabel="QualifyStackView">
                                                 <rect key="frame" x="8" y="383" width="359" height="136"/>
                                                 <subviews>
-                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmJ-ck-fA6" userLabel="QualifyView">
+                                                    <view alpha="0.5" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tmJ-ck-fA6" userLabel="QualifyView">
                                                         <rect key="frame" x="0.0" y="0.0" width="167" height="136"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-o9-xpr">
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-o9-xpr" userLabel="lastresults">
                                                         <rect key="frame" x="192" y="0.0" width="167" height="136"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
@@ -218,7 +216,28 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kSi-R4-Sap"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="best performance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qs-gF-QIW">
+                                        <rect key="frame" x="8" y="525" width="359" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="qualifed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GnP-LL-j6L" userLabel="qualifedresults">
+                                        <rect key="frame" x="15" y="336" width="156" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                        <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uhQ-Ci-Anj" userLabel="results">
+                                        <rect key="frame" x="206" y="336" width="156" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.80392156859999997" green="0.70588235290000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -263,6 +282,9 @@
                     <size key="freeformSize" width="375" height="1550"/>
                     <connections>
                         <outlet property="bannerView" destination="Ctc-SW-9U0" id="QVR-di-AZB"/>
+                        <outlet property="bestPerformance" destination="2Qs-gF-QIW" id="MbJ-4a-ZGX"/>
+                        <outlet property="lastResults" destination="uhQ-Ci-Anj" id="dHB-3X-tQ6"/>
+                        <outlet property="qualifed" destination="GnP-LL-j6L" id="TyW-mI-hEY"/>
                         <outlet property="scrollView" destination="Ddn-Du-9uV" id="cl8-de-X23"/>
                         <outlet property="starMan" destination="kYD-78-i2A" id="04y-kM-ygu"/>
                         <outlet property="starManName" destination="lF7-SM-nu8" id="wVq-Yv-DF8"/>
