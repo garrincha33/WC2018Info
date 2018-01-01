@@ -16,6 +16,9 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var starMan: UILabel!
     @IBOutlet weak var starManName: UILabel!
+    @IBOutlet weak var bestPerformance: UILabel!
+    @IBOutlet weak var qualifed: UILabel!
+    @IBOutlet weak var lastResults: UILabel!
     
     var uid = ""
     var team: [Teams] = []
@@ -32,9 +35,6 @@ class TeamDetailViewController: UIViewController {
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
         loadTeams()
        setCustomBackButton()
-    
-        
-    
 
     }
     
@@ -68,6 +68,9 @@ class TeamDetailViewController: UIViewController {
             self.teamName.text = team.teamName
             self.starMan.text = team.starMan
             self.starManName.text = team.starManName
+            self.bestPerformance.text = team.bestPerformance
+            self.qualifed.text = team.qualified
+            self.lastResults.text = team.lastResults
         }
     }
 }
