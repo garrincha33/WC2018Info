@@ -9,17 +9,18 @@
 import Foundation
 class Teams {
     
-    var teamNameLowerCase: String?
-    var teamName: String?
-    var photoUrl: String?
-    var starMan: String?
-    var starManName: String?
-    var uid: String?
-    var id: String?
-    var bestPerformance: String?
-    var description: String?
-    var lastAppearance: String?
-    var qualified: String?
+    var teamNameLowerCase:       String?
+    var teamName:                String?
+    var photoUrl:                String?
+    var starMan:                 String?
+    var starManName:             String?
+    var uid:                     String?
+    var id:                      String?
+    var bestPerformance:         String?
+    var description:             String?
+    var lastAppearance:          String?
+    var qualified:               String?
+    var lastResults:             String?
     
 }
 extension Teams {
@@ -37,6 +38,7 @@ extension Teams {
         team.description = dict["description"] as? String
         team.lastAppearance = dict["lastappearance"] as? String
         team.qualified = dict["qualified"] as? String
+        team.lastResults = dict["lastresults"] as? String
 
         return team
         

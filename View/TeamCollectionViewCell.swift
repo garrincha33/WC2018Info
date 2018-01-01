@@ -18,6 +18,8 @@ class TeamCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var teamPhoto: UIImageView!
     var delegate: TeamCollectionViewCellDelegate?
+   
+    
     var teams: Teams? {
         didSet {
             
