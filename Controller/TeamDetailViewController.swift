@@ -19,6 +19,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var bestPerformance: UILabel!
     @IBOutlet weak var qualifed: UILabel!
     @IBOutlet weak var lastResults: UILabel!
+    @IBOutlet weak var teamDetails: UILabel!
     
     var uid = ""
     var team: [Teams] = []
@@ -71,6 +72,7 @@ class TeamDetailViewController: UIViewController {
             self.bestPerformance.text = team.bestPerformance
             self.qualifed.text = team.qualified
             self.lastResults.text = team.lastResults
+            self.teamDetails.text = team.teamDetails
         }
     }
 }
