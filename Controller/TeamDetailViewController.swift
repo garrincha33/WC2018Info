@@ -20,6 +20,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var qualifed: UILabel!
     @IBOutlet weak var lastResults: UILabel!
     @IBOutlet weak var teamDetails: UILabel!
+    @IBOutlet weak var odds: UILabel!
     
     var uid = ""
     var team: [Teams] = []
@@ -73,6 +74,7 @@ class TeamDetailViewController: UIViewController {
             self.qualifed.text = team.qualified
             self.lastResults.text = team.lastResults
             self.teamDetails.text = team.teamDetails
+            self.odds.text = team.latestBettingOdds
         }
     }
 }

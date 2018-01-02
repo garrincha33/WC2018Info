@@ -17,6 +17,7 @@ protocol TeamCollectionViewCellDelegate {
 class TeamCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var teamPhoto: UIImageView!
+    
     var delegate: TeamCollectionViewCellDelegate?
    
     
