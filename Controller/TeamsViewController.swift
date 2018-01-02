@@ -38,10 +38,6 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
-        
-        
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -164,9 +160,4 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-}
-
-extension UISearchBar {
-    
-    
 }

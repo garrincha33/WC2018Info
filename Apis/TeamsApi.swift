@@ -12,7 +12,7 @@ class TeamApi {
     
     var REF_TEAMS = Database.database().reference().child("teams")
     
-    //--use in TeamsVC to load team flags preparing for swwitch to teamsDetailsVC
+    //--use in TeamsVC to load team flags preparing for switch to teamsDetailsVC
     func getTeams(completion: @escaping(Teams) -> Void) {
         REF_TEAMS.observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
             let arraySnap = (snapshot.children.allObjects as! [DataSnapshot]).reversed()
