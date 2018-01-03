@@ -54,7 +54,10 @@ class TeamsViewController: UIViewController {
         Api.User.getTeams { (team) in
             self.teams.append(team)
             self.teasmsCopy.append(team)
-            self.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            
         }
         
     }
