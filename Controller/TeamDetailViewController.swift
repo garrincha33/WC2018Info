@@ -22,6 +22,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var teamDetails: UILabel!
     @IBOutlet weak var odds: UILabel!
     
+
     var uid = ""
     var team: [Teams] = []
     
@@ -36,15 +37,10 @@ class TeamDetailViewController: UIViewController {
         bannerView.load(GADRequest())
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
         loadTeams()
-       setCustomBackButton()
+        
+        
 
     }
-    
-    func setCustomBackButton() {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
@@ -52,19 +48,16 @@ class TeamDetailViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         //self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 1
         self.view.insertSubview(backgroundImage, at: 0)
+  
         
     }
-    
- 
-    
-    func loadTeams() {
+
+        func loadTeams() {
         Api.User.observeTeams(withId: uid) { (team) in
             self.team.append(team)
             self.teamName.text = team.teamName
