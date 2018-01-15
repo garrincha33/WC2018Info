@@ -38,6 +38,8 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +49,8 @@ class TeamsViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         //self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+       
     }
     
     func loadTeams() {
@@ -100,6 +104,8 @@ extension TeamsViewController: UICollectionViewDataSource{
         cell.teams = team
         cell.delegate = self
         return cell
+        
+       
     }
 }
 
@@ -162,5 +168,23 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func backButtonAction() {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func addBackbutton(title: String) {
+        if let nav = self.navigationController,
+            let item = nav.navigationBar.topItem {
+            item.backBarButtonItem  = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action:
+                #selector(self.backButtonAction))
+        } else {
+            if let nav = self.navigationController,
+                let _ = nav.navigationBar.backItem {
+                self.navigationController!.navigationBar.backItem!.title = title
+            }
+        }
     }
 }
