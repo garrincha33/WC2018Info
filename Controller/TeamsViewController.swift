@@ -104,8 +104,6 @@ extension TeamsViewController: UICollectionViewDataSource{
         cell.teams = team
         cell.delegate = self
         return cell
-        
-       
     }
 }
 

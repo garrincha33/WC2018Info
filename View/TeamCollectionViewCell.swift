@@ -31,7 +31,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     func updateView() {
         
-        if let photoUrlString = teams?.photoUrl {
+            if let photoUrlString = teams?.photoUrl {
             let photoUrl = URL(string: photoUrlString)
             teamPhoto.sd_setImage(with: photoUrl)
         }
@@ -41,13 +41,10 @@ class TeamCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func handleSelectPhoto() {
-        
         if let teamId = teams?.id {
             delegate?.goToTeamDetailsVC(teamId: teamId)
-            print("tapped")
         }
     }
-        
 }
 
 

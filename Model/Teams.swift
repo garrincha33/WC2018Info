@@ -23,6 +23,7 @@ class Teams {
     var lastResults:             String?
     var teamDetails:             String?
     var latestBettingOdds:       String?
+    var nextFixtures:            String?
     
 }
 extension Teams {
@@ -43,6 +44,7 @@ extension Teams {
         team.lastResults = dict["lastresults"] as? String
         team.teamDetails = dict["teamdetails"] as? String
         team.latestBettingOdds = dict["latestbettingodds"] as? String
+        team.nextFixtures = dict["nextfixtures"] as? String
 
         return team
         
