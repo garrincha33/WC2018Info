@@ -19,13 +19,17 @@ class TeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //--hidekeyboard
         self.hideKeyboardWhenTappedAround()
+        
         //-----collection view data source and delegate
         collectionView.dataSource = self
         collectionView.delegate = self
+        
         //----load team data
         loadTeams()
+        
         //----------NavBar coloring and background pic
         self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
@@ -33,13 +37,12 @@ class TeamsViewController: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 0.2
         self.view.insertSubview(backgroundImage, at: 0)
+        
         //----searchbar customisation
         searchBar.placeholder = "search for your team"
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +53,7 @@ class TeamsViewController: UIViewController {
         //self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-       
+        
     }
     
     func loadTeams() {
@@ -78,10 +81,10 @@ class TeamsViewController: UIViewController {
         if let search = searchBar.text {
             teams = (search.isEmpty) ? teasmsCopy : teasmsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
         }
-   
+        
         collectionView.reloadData()
     }
- 
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TeamDetailVC" {
             transition()
