@@ -11,20 +11,20 @@ import GoogleMobileAds
 
 class TeamDetailViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bannerView: GADBannerView!
-    @IBOutlet weak var teamName: UILabel!
-    @IBOutlet weak var starMan: UILabel!
-    @IBOutlet weak var starManName: UILabel!
-    @IBOutlet weak var bestPerformance: UILabel!
-    @IBOutlet weak var qualifed: UILabel!
-    @IBOutlet weak var lastResults: UILabel!
-    @IBOutlet weak var teamDetails: UILabel!
-    @IBOutlet weak var odds: UILabel!
-    @IBOutlet weak var nextFixtires: UILabel!
+    @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var bannerView: GADBannerView!
+    @IBOutlet weak private var teamName: UILabel!
+    @IBOutlet weak private var starMan: UILabel!
+    @IBOutlet weak private var starManName: UILabel!
+    @IBOutlet weak private var bestPerformance: UILabel!
+    @IBOutlet weak private var qualifed: UILabel!
+    @IBOutlet weak private var lastResults: UILabel!
+    @IBOutlet weak private var teamDetails: UILabel!
+    @IBOutlet weak private var odds: UILabel!
+    @IBOutlet weak private var nextFixtires: UILabel!
     
     var uid = ""
-    var team: [Teams] = []
+    private var team: [Teams] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,6 @@ class TeamDetailViewController: UIViewController {
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
         loadTeams()
         
-        
-
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -53,11 +51,9 @@ class TeamDetailViewController: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 1
         self.view.insertSubview(backgroundImage, at: 0)
-  
-        
     }
 
-        func loadTeams() {
+        private func loadTeams() {
         Api.User.observeTeams(withId: uid) { (team) in
             self.team.append(team)
             self.teamName.text = team.teamName

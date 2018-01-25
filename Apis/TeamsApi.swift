@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 class TeamApi {
     
-    var REF_TEAMS = Database.database().reference().child("teams")
+    private var REF_TEAMS = Database.database().reference().child("teams")
     
     //--use in TeamsVC to load team flags preparing for switch to teamsDetailsVC
     func getTeams(completion: @escaping(Teams) -> Void) {

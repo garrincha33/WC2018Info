@@ -9,13 +9,15 @@
 import UIKit
 
 class TeamsViewController: UIViewController {
+   
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak private var searchBar: UISearchBar!
     
     //--MARK-----arrays to hold teams from API here
-    var teams:      [Teams] = []
-    var teasmsCopy: [Teams] = []
+    private var teams:      [Teams] = []
+    private var teamsCopy:  [Teams] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,8 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,13 +58,15 @@ class TeamsViewController: UIViewController {
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        
+ 
     }
     
-    func loadTeams() {
+    private func loadTeams() {
         //API get teams
         Api.User.getTeams { (team) in
             self.teams.append(team)
-            self.teasmsCopy.append(team)
+            self.teamsCopy.append(team)
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -68,8 +74,8 @@ class TeamsViewController: UIViewController {
         }
         
     }
-    
-    func transition() {
+ 
+    @objc func transition() {
         let transition = CATransition()
         transition.duration = 0.7
         transition.type = kCATransitionPush
@@ -77,13 +83,16 @@ class TeamsViewController: UIViewController {
         self.view.window?.layer.add(transition, forKey: kCATransition)
     }
     
-    func doSearch() {
+
+    
+    private func doSearch() {
         if let search = searchBar.text {
-            teams = (search.isEmpty) ? teasmsCopy : teasmsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
+            teams = (search.isEmpty) ? teamsCopy : teamsCopy.filter({$0.teamName?.localizedCaseInsensitiveContains(search) == true})
         }
         
         collectionView.reloadData()
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TeamDetailVC" {
@@ -138,7 +147,9 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
 extension TeamsViewController: TeamCollectionViewCellDelegate {
     
     func goToTeamDetailsVC(teamId: String) {
+       
         UIView.setAnimationsEnabled(false)
+        
         performSegue(withIdentifier: "TeamDetailVC", sender: teamId)
         
     }
@@ -171,21 +182,29 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-    @objc func backButtonAction() {
-        self.dismiss(animated: true, completion: nil)
-        
-    }
+//    @objc func backButtonAction() {
+//        let transition: CATransition = CATransition()
+//        transition.duration = 0.5
+//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        transition.type = kCATransitionReveal
+//        transition.subtype = kCATransitionFromRight
+//        self.view.window!.layer.add(transition, forKey: nil)
+//        self.navigationController?.popViewController(animated: true)
+//
+//    }
     
-    func addBackbutton(title: String) {
-        if let nav = self.navigationController,
-            let item = nav.navigationBar.topItem {
-            item.backBarButtonItem  = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action:
-                #selector(self.backButtonAction))
-        } else {
-            if let nav = self.navigationController,
-                let _ = nav.navigationBar.backItem {
-                self.navigationController!.navigationBar.backItem!.title = title
-            }
-        }
-    }
+  
+    
+//    func addBackbutton(title: String) {
+//        if let nav = self.navigationController,
+//            let item = nav.navigationBar.topItem {
+//            item.backBarButtonItem  = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action:
+//                #selector(self.backButtonAction))
+//        } else {
+//            if let nav = self.navigationController,
+//                let _ = nav.navigationBar.backItem {
+//                self.navigationController!.navigationBar.backItem!.title = title
+//            }
+//        }
+//    }
 }

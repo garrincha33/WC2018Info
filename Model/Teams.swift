@@ -7,28 +7,28 @@
 //
 
 import Foundation
-class Teams {
+struct Teams {
     
-    var teamNameLowerCase:       String?
-    var teamName:                String?
-    var photoUrl:                String?
-    var starMan:                 String?
-    var starManName:             String?
-    var uid:                     String?
-    var id:                      String?
-    var bestPerformance:         String?
-    var description:             String?
-    var lastAppearance:          String?
-    var qualified:               String?
-    var lastResults:             String?
-    var teamDetails:             String?
-    var latestBettingOdds:       String?
-    var nextFixtures:            String?
+    private(set) var teamNameLowerCase:       String?
+    private(set) var teamName:                String?
+    private(set) var photoUrl:                String?
+    private(set) var starMan:                 String?
+    private(set) var starManName:             String?
+    private(set) var uid:                     String?
+    private(set) var id:                      String?
+    private(set) var bestPerformance:         String?
+    private(set) var description:             String?
+    private(set) var lastAppearance:          String?
+    private(set) var qualified:               String?
+    private(set) var lastResults:             String?
+    private(set) var teamDetails:             String?
+    private(set) var latestBettingOdds:       String?
+    private(set) var nextFixtures:            String?
     
 }
 extension Teams {
     func transformTeam(dict: [String: Any], key: String) -> Teams {
-        let team = Teams()
+        var team = Teams()
         team.id = key
         //-----------------teamdata from firebase
         team.teamNameLowerCase = dict["teamname_lowercase"] as? String
@@ -45,7 +45,7 @@ extension Teams {
         team.teamDetails = dict["teamdetails"] as? String
         team.latestBettingOdds = dict["latestbettingodds"] as? String
         team.nextFixtures = dict["nextfixtures"] as? String
-
+  
         return team
         
     }

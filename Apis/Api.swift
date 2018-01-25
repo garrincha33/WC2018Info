@@ -10,5 +10,5 @@ import Foundation
 
 struct Api {
     //call in VC
-    static var User = TeamApi()
+    private(set) static var User = TeamApi()
 }

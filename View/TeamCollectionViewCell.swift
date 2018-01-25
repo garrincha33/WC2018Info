@@ -21,7 +21,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     var delegate: TeamCollectionViewCellDelegate?
    
     
-    var teams: Teams? {
+     var teams: Teams? {
         didSet {
             
             updateView()
@@ -29,7 +29,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func updateView() {
+    private func updateView() {
         
             if let photoUrlString = teams?.photoUrl {
             let photoUrl = URL(string: photoUrlString)
