@@ -31,7 +31,7 @@ class TeamDetailViewController: UIViewController {
         
        
         //--test bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.adUnitID = "ca-app-pub-4849153814101309/2541015704"
+        bannerView.adUnitID = "ca-app-pub-4849153814101309/7780006039"
         
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
