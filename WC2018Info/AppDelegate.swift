@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = UIColor.white
         
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
-        //--live GADMobileAds.configure(withApplicationID: "ca-app-pub-4849153814101309/2541015704")
+        //--test  GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-4849153814101309/2541015704")
         return true
     }
 
