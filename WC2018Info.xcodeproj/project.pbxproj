@@ -86,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				1B495E0F1FA70BC300A8739F /* Services */,
-				1B495E061FA6123000A8739F /* Helpers */,
 				1B495E051FA6122400A8739F /* Apis */,
 				1B495E021FA6120700A8739F /* Model */,
 				1B495E031FA6120D00A8739F /* View */,
@@ -186,13 +185,6 @@
 				1B495E0D1FA6585000A8739F /* TeamsApi.swift */,
 			);
 			path = Apis;
-			sourceTree = "<group>";
-		};
-		1B495E061FA6123000A8739F /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1B495E0F1FA70BC300A8739F /* Services */ = {

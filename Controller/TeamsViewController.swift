@@ -9,7 +9,7 @@
 import UIKit
 
 class TeamsViewController: UIViewController {
-   
+    
     
     
     @IBOutlet weak private var collectionView: UICollectionView!
@@ -45,7 +45,7 @@ class TeamsViewController: UIViewController {
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
-
+        
         
     }
     
@@ -59,7 +59,7 @@ class TeamsViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         
- 
+        
     }
     
     private func loadTeams() {
@@ -74,8 +74,8 @@ class TeamsViewController: UIViewController {
         }
         
     }
- 
-    @objc func transition() {
+    
+    @objc private func transition() {
         let transition = CATransition()
         transition.duration = 0.7
         transition.type = kCATransitionPush
@@ -83,7 +83,7 @@ class TeamsViewController: UIViewController {
         self.view.window?.layer.add(transition, forKey: kCATransition)
     }
     
-
+    
     
     private func doSearch() {
         if let search = searchBar.text {
@@ -92,7 +92,7 @@ class TeamsViewController: UIViewController {
         
         collectionView.reloadData()
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TeamDetailVC" {
@@ -147,7 +147,7 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
 extension TeamsViewController: TeamCollectionViewCellDelegate {
     
     func goToTeamDetailsVC(teamId: String) {
-       
+        
         UIView.setAnimationsEnabled(false)
         
         performSegue(withIdentifier: "TeamDetailVC", sender: teamId)
@@ -181,30 +181,4 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-//    @objc func backButtonAction() {
-//        let transition: CATransition = CATransition()
-//        transition.duration = 0.5
-//        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        transition.type = kCATransitionReveal
-//        transition.subtype = kCATransitionFromRight
-//        self.view.window!.layer.add(transition, forKey: nil)
-//        self.navigationController?.popViewController(animated: true)
-//
-//    }
-    
-  
-    
-//    func addBackbutton(title: String) {
-//        if let nav = self.navigationController,
-//            let item = nav.navigationBar.topItem {
-//            item.backBarButtonItem  = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action:
-//                #selector(self.backButtonAction))
-//        } else {
-//            if let nav = self.navigationController,
-//                let _ = nav.navigationBar.backItem {
-//                self.navigationController!.navigationBar.backItem!.title = title
-//            }
-//        }
-//    }
 }

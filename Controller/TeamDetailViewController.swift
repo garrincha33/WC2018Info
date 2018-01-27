@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 
 class TeamDetailViewController: UIViewController {
-
+    
     @IBOutlet weak private var scrollView: UIScrollView!
     @IBOutlet weak private var bannerView: GADBannerView!
     @IBOutlet weak private var teamName: UILabel!
@@ -29,9 +29,9 @@ class TeamDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //-----google ads DONT FORGET TO CHANGE TO LIVE ACCOUNT CURRENTLY ON TEST
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-       //--live bannerView.adUnitID = "ca-app-pub-4849153814101309/2541015704"
+       
+        //--test bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-4849153814101309/2541015704"
         
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -52,8 +52,8 @@ class TeamDetailViewController: UIViewController {
         backgroundImage.alpha = 1
         self.view.insertSubview(backgroundImage, at: 0)
     }
-
-        private func loadTeams() {
+    
+    private func loadTeams() {
         Api.User.observeTeams(withId: uid) { (team) in
             self.team.append(team)
             self.teamName.text = team.teamName
