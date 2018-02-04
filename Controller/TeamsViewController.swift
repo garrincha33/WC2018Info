@@ -10,8 +10,6 @@ import UIKit
 
 class TeamsViewController: UIViewController {
     
-    
-    
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var searchBar: UISearchBar!
     
@@ -35,7 +33,7 @@ class TeamsViewController: UIViewController {
         //----------NavBar coloring and background pic
         self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg1")
+        backgroundImage.image = UIImage(named: "bg2")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 0.2
         self.view.insertSubview(backgroundImage, at: 0)
@@ -57,9 +55,6 @@ class TeamsViewController: UIViewController {
         //self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        
-        
     }
     
     private func loadTeams() {
