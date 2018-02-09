@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--WC2018 INFO-->
+        <!--Team Info-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TeamsViewController" customModule="WC2018Info" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WC2018 INFO" id="Fe2-Iq-v3m"/>
+                    <navigationItem key="navigationItem" title="Team Info" id="Fe2-Iq-v3m"/>
                     <connections>
                         <outlet property="collectionView" destination="jC6-bj-odD" id="e0i-z4-8rh"/>
                         <outlet property="searchBar" destination="0aW-b1-zge" id="bxY-Es-QM4"/>
@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="558" y="-92"/>
         </scene>
-        <!--WC2018 Info-->
+        <!--Team Info-->
         <scene sceneID="pLw-ZA-O7n">
             <objects>
                 <viewController storyboardIdentifier="TeamDetailVC" id="t6r-2I-nws" customClass="TeamDetailViewController" customModule="WC2018Info" customModuleProvider="target" sceneMemberID="viewController">
@@ -499,7 +499,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="izB-vQ-CTX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WC2018 Info" id="aXK-Sc-6E1"/>
+                    <navigationItem key="navigationItem" title="Team Info" id="aXK-Sc-6E1"/>
                     <size key="freeformSize" width="375" height="1550"/>
                     <connections>
                         <outlet property="bannerView" destination="Ctc-SW-9U0" id="QVR-di-AZB"/>
