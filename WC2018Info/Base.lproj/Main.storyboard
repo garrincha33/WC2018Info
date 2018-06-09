@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxD-wW-fXb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxD-wW-fXb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,13 +12,9 @@
         <array key="HEADPLANE.TTF">
             <string>headplane</string>
         </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
-        </array>
     </customFonts>
     <scenes>
-        <!--WC2018 INFO-->
+        <!--Teams View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TeamsViewController" customModule="WC2018Info" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WC2018 INFO" id="Fe2-Iq-v3m"/>
+                    <navigationItem key="navigationItem" id="Fe2-Iq-v3m"/>
                     <connections>
                         <outlet property="collectionView" destination="jC6-bj-odD" id="e0i-z4-8rh"/>
                         <outlet property="searchBar" destination="0aW-b1-zge" id="bxY-Es-QM4"/>
@@ -98,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="558" y="-92"/>
         </scene>
-        <!--WC2018 Info-->
+        <!--Team Info-->
         <scene sceneID="pLw-ZA-O7n">
             <objects>
                 <viewController storyboardIdentifier="TeamDetailVC" id="t6r-2I-nws" customClass="TeamDetailViewController" customModule="WC2018Info" customModuleProvider="target" sceneMemberID="viewController">
@@ -499,7 +495,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="izB-vQ-CTX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WC2018 Info" id="aXK-Sc-6E1"/>
+                    <navigationItem key="navigationItem" title="Team Info" id="aXK-Sc-6E1"/>
                     <size key="freeformSize" width="375" height="1550"/>
                     <connections>
                         <outlet property="bannerView" destination="Ctc-SW-9U0" id="QVR-di-AZB"/>
@@ -535,7 +531,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uu-We-qYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-425" y="45"/>
+            <point key="canvasLocation" x="-447" y="-92"/>
         </scene>
     </scenes>
     <resources>

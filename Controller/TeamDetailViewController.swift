@@ -28,29 +28,32 @@ class TeamDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         //--test bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        setupBanner()
+        loadTeams()
+    }
+    
+    private func setupBanner() {
         bannerView.adUnitID = "ca-app-pub-4849153814101309/7780006039"
-        
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         scrollView.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 0.8)
-        loadTeams()
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
-        self.navigationController?.navigationBar.isTranslucent = false
-        //self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg1")
-        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-        backgroundImage.alpha = 1
-        self.view.insertSubview(backgroundImage, at: 0)
+        setupView()
+    }
+    
+    private func setupView() {
+    self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+    self.navigationController?.navigationBar.barTintColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
+    self.navigationController?.navigationBar.isTranslucent = false
+    self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+    let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+    backgroundImage.image = UIImage(named: "bg2")
+    backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+    backgroundImage.alpha = 1
+    self.view.insertSubview(backgroundImage, at: 0)
     }
     
     private func loadTeams() {

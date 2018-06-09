@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+
 class TeamApi {
     
     private var REF_TEAMS = Database.database().reference().child("teams")
