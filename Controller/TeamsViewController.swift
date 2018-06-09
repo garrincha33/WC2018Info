@@ -19,36 +19,51 @@ class TeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //--hidekeyboard
-        self.hideKeyboardWhenTappedAround()
-        
         //-----collection view data source and delegate
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         //----load team data
         loadTeams()
-        
         //----------NavBar coloring and background pic
+        setupColouring()
+        //----searchbar customisation
+        setupSearchBar()
+    }
+    
+    //MARK:- Helper Functions
+    
+    private func setupColouring() {
         self.view.backgroundColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg2")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         backgroundImage.alpha = 0.2
         self.view.insertSubview(backgroundImage, at: 0)
-        
-        //----searchbar customisation
+    }
+    
+    private func setupSearchBar() {
+        self.hideKeyboardWhenTappedAround()
         searchBar.placeholder = "search for your team"
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.tintColor = UIColor(red: 205, green: 180, blue: 106, alpha: 1)
-        
+        navigationItem.title = "Team Info"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Forum", style: .plain, target: self, action: #selector(handleForumButton))
+    }
+    
+    @objc func handleForumButton() {
+        print("testing forum button")
         
     }
     
+    //MARK:-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupnavBar()
+    }
+    
+    private func setupnavBar() {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 13/255.0, green: 56/255.0, blue: 70/255.0, alpha: 1)
         self.navigationController?.navigationBar.isTranslucent = false
@@ -70,6 +85,8 @@ class TeamsViewController: UIViewController {
         
     }
     
+    //MARK:- Custom transition
+    
     @objc private func transition() {
         let transition = CATransition()
         transition.duration = 0.7
@@ -78,7 +95,7 @@ class TeamsViewController: UIViewController {
         self.view.window?.layer.add(transition, forKey: kCATransition)
     }
     
-    
+    //MARK:-
     
     private func doSearch() {
         if let search = searchBar.text {
@@ -87,8 +104,6 @@ class TeamsViewController: UIViewController {
         
         collectionView.reloadData()
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TeamDetailVC" {
             transition()
@@ -99,6 +114,8 @@ class TeamsViewController: UIViewController {
         }
     }
 }
+
+//MARK:- Extensions
 
 extension TeamsViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -140,11 +157,8 @@ extension TeamsViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension TeamsViewController: TeamCollectionViewCellDelegate {
-    
     func goToTeamDetailsVC(teamId: String) {
-        
         UIView.setAnimationsEnabled(false)
-        
         performSegue(withIdentifier: "TeamDetailVC", sender: teamId)
         
     }
